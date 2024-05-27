@@ -20,7 +20,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-30 w-full border-b bg-[#000000] border-transparent max-md:border-gray-100 bg-gray/50 backdrop-blur-xl md:border-gray-100">
+    <nav className="sticky top-0 z-30 w-full border-b bg-[#000000] border-transparent max-md:border-gray-100 bg-black/50 backdrop-blur-xl md:border-gray-100">
       <div className="mx-auto flex flex-col md:flex-row w-full max-w-7xl md:items-center justify-between p-4 md:px-8">
         <div>
           <NavLink to="/">
