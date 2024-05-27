@@ -2,6 +2,8 @@ import Button from "../components/general/Button";
 import { NavLink } from "react-router-dom";
 import Hero1 from "../assets/imgs/Photo.png";
 import Hero2 from "../assets/imgs/Photo2.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = () => {
   return (
@@ -28,7 +30,8 @@ const HomePage = () => {
             <div className="grid place-items-center">
               <Button>
                 <NavLink to="/contact" className="text-white">
-                  Reques Services
+                  Request Services{" "}
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                 </NavLink>
               </Button>
             </div>
