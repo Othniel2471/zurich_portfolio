@@ -48,7 +48,11 @@ const NavBar = () => {
         >
           {links.map((link) => {
             return (
-              <li key={link.linkName} className="md:my-0 my-7 ">
+              <li
+                key={link.linkName}
+                className="md:my-0 my-7 "
+                onClick={toggleMenu}
+              >
                 <NavLink
                   to={link.link}
                   className="text-base font-medium text-white transition-all hover:bg-[#5B0202] hover:py-[10px] hover:px-[10px] active:text-gray-600 hover:cursor-pointer"
