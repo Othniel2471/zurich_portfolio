@@ -1,9 +1,7 @@
-function App() {
-  return (
-    <>
-      <h1 className="text-3xl font-bold underline text-center">Hello world!</h1>{" "}
-    </>
-  );
-}
+import DisplayBody from "./components/layouts/DisplayBody";
+
+const App = () => {
+  return <DisplayBody />;
+};
 
 export default App;
