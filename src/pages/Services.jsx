@@ -4,10 +4,7 @@ import servImg3 from "../assets/imgs/hero-img.jpg";
 
 const Services = () => {
   return (
-    <section
-      className="w-full py-16 md:py-20 2xl:py-24 bg-black text-white"
-      id="work"
-    >
+    <section className="w-full py-16 md:py-20 2xl:py-24 bg-black text-white">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8">
         <div className="grid place-items-center gap-10 mb-4">
           <h2 className="capitalize font-[600] text-[30px] text-[#ffff]">

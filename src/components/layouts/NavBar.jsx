@@ -10,7 +10,7 @@ const NavBar = () => {
     { linkName: "home", link: "/" },
     { linkName: "why us", link: "/why-us" },
     { linkName: "our services", link: "/services" },
-    { linkName: "our products", link: "/products" },
+    { linkName: "our projects", link: "/products" },
   ];
 
   let [showMenu, setShowMenu] = useState(false);
