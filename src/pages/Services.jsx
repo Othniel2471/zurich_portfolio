@@ -1,3 +1,7 @@
+import servImg from "../assets/imgs/services.jpg";
+import servImg2 from "../assets/imgs/hero-img2.jpg";
+import servImg3 from "../assets/imgs/hero-img.jpg";
+
 const Services = () => {
   return (
     <section
@@ -18,9 +22,92 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid place-items-center lg:grid-cols-3">
-          <div>one</div>
-          <div>one</div>
+        <div className="grid place-items-center gap-3">
+          <div className=" grid place-items-center lg:grid-cols-2">
+            <div className="mb-5">
+              <img
+                src={servImg}
+                alt=""
+                className="w-[300px] h-[200px] lg:w-[510px] lg:h-[400px] rounded-md"
+              />
+            </div>
+            <div className=" ">
+              <div className="flex flex-col-reverse gap-2 lg:flex-row">
+                <div className="border-t-2 border-gray-100 w-[200px] lg:w-1/2"></div>
+                <span className="capitalize font-[600] text-[20px] lg:translate-y-[-1rem]">
+                  building construction
+                </span>
+              </div>
+              <div className="flex">
+                <p className="w-[312px] text-[20px] font-[400]">
+                  We pride ourselves of vast experience in the building industry
+                  where we have constructed both high-rise and low-rise
+                  residential buildings, commercial buildings and also
+                  institutional buildings.
+                </p>
+                <span className="hidden lg:block font-[600] text-[11em] translate-y-[-5rem]">
+                  01
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className=" grid place-items-center lg:grid-cols-2">
+            <div className="mb-5 lg:order-2">
+              <img
+                src={servImg2}
+                alt=""
+                className="w-[300px] h-[200px] lg:w-[510px] lg:h-[350px] rounded-md"
+              />
+            </div>
+            <div className="lg:order-1 ">
+              <div className="flex flex-col-reverse gap-2 lg:flex-row">
+                <div className="border-t-2 border-gray-100 w-[309px] mb-2 lg:w-1/3"></div>
+                <span className="capitalize font-[600] text-[20px] lg:translate-y-[-1rem]">
+                  construction project management
+                </span>
+              </div>
+              <div className="flex">
+                <p className="w-[312px] text-[20px] font-[400]">
+                  We also offer a wide range of project management services
+                  which include but not limited to construction project planning
+                  & management, contract management, construction project
+                  supervisions and site inspections.
+                </p>
+                <span className="hidden lg:block font-[600] text-[11em] translate-y-[-5rem]">
+                  02
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className=" grid place-items-center lg:grid-cols-2">
+            <div className="mb-5">
+              <img
+                src={servImg3}
+                alt=""
+                className="w-[300px] h-[200px] lg:w-[510px] lg:h-[400px] rounded-md"
+              />
+            </div>
+            <div className="ml-2">
+              <div className="flex flex-col-reverse gap-2 lg:flex-row">
+                <div className="border-t-2 border-gray-100 w-[275px] lg:w-1/3 mb-2"></div>
+                <span className="capitalize font-[600] text-[20px] lg:translate-y-[-1rem]">
+                  bridge and road construction
+                </span>
+              </div>
+              <div className="flex">
+                <p className="w-[312px] text-[20px] font-[400]">
+                  Zurich consulting Ltd. also offers a wide range of civil and
+                  structural engineering construction ranging from steel
+                  structures erections, reinforced concrete structures and road
+                  construction in gravel, paving blocks, concrete, bitumen roads
+                  and associated drainage structures.
+                </p>
+                <span className="hidden lg:block font-[600] text-[11em] translate-y-[-5rem]">
+                  03
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
