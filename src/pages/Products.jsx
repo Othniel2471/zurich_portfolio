@@ -8,6 +8,7 @@ import video from "../assets/video/video.mp4";
 import Button from "../components/general/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const Products = () => {
   useEffect(() => {
@@ -41,7 +42,12 @@ const Products = () => {
                 className="w-[300px] h-[200px] lg:w-[333px] lg:h-[400px] rounded-md"
               />
             </div>
-            <div className="flex flex-col justify-center items-center order-1 lg:order-2 ">
+            <motion.div
+              className="flex flex-col justify-center items-center order-1 lg:order-2 "
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
               <Button className="w-[11rem] h-[64px] flex gap-1 mb-5  rounded-md">
                 view full projects{" "}
                 <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
@@ -51,37 +57,50 @@ const Products = () => {
                 alt=""
                 className="w-[300px] h-[200px] lg:w-[333px] lg:h-[400px] "
               />
-            </div>
-            <div className="order-3">
+            </motion.div>
+            <motion.div
+              className="order-3"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
               <img
                 src={image3}
                 alt=""
                 className="w-[300px] h-[200px] lg:w-[333px] lg:h-[400px]"
               />
-            </div>
-
-            {/* <div>
-            <img src={image6} alt="" />
-          </div> */}
+            </motion.div>
           </div>
           <div className="flex flex-col lg:flex-row gap-3">
-            <div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
               <img
                 src={image4}
                 alt=""
                 className="w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] "
               />
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
               <img
                 src={image5}
                 alt=""
                 className="w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] "
               />
-            </div>
+            </motion.div>
           </div>
-          <div>
-            <video
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <motion.video
               id="video"
               src={video}
               muted
@@ -89,8 +108,11 @@ const Products = () => {
               loop
               controls
               className="w-[300px] h-[200px] lg:w-[1058px] lg:h-[450px] "
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

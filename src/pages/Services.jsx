@@ -1,6 +1,7 @@
 import servImg from "../assets/imgs/services.jpg";
 import servImg2 from "../assets/imgs/hero-img2.jpg";
 import servImg3 from "../assets/imgs/hero-img.jpg";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
@@ -20,7 +21,12 @@ const Services = () => {
         </div>
 
         <div className="grid place-items-center gap-3">
-          <div className=" grid place-items-center lg:grid-cols-2">
+          <motion.div
+            className=" grid place-items-center lg:grid-cols-2"
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="mb-5">
               <img
                 src={servImg}
@@ -47,8 +53,13 @@ const Services = () => {
                 </span>
               </div>
             </div>
-          </div>
-          <div className=" grid place-items-center lg:grid-cols-2">
+          </motion.div>
+          <motion.div
+            className=" grid place-items-center lg:grid-cols-2"
+            initial={{ opacity: 0, scale: 0, x: 100 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="mb-5 lg:order-2">
               <img
                 src={servImg2}
@@ -75,8 +86,13 @@ const Services = () => {
                 </span>
               </div>
             </div>
-          </div>
-          <div className=" grid place-items-center lg:grid-cols-2">
+          </motion.div>
+          <motion.div
+            className=" grid place-items-center lg:grid-cols-2"
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="mb-5">
               <img
                 src={servImg3}
@@ -104,7 +120,7 @@ const Services = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

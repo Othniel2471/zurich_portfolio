@@ -4,6 +4,7 @@ import Hero1 from "../assets/imgs/Photo.png";
 import Hero2 from "../assets/imgs/Photo2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   return (
@@ -36,15 +37,21 @@ const HomePage = () => {
               </Button>
             </div>
             <div className="flex flex-col lg:flex-row  justify-center items-center  gap-2">
-              <img
+              <motion.img
                 src={Hero1}
                 alt="hero1"
                 className=" w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] "
+                initial={{ opacity: 0, scale: 0, y: 100 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
               />
-              <img
+              <motion.img
                 src={Hero2}
                 alt="hero2"
                 className="w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] "
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6 }}
               />
             </div>
           </div>
