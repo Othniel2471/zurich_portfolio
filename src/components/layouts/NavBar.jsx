@@ -19,6 +19,10 @@ const NavBar = () => {
     setShowMenu(!showMenu);
   };
 
+  const closeMenu = () => {
+    setShowMenu(false);
+  };
+
   return (
     <nav className="sticky top-0 z-30 w-full border-b bg-[#000000] border-transparent max-md:border-gray-100 bg-black/50 backdrop-blur-xl md:border-gray-100">
       <div className="mx-auto flex flex-col md:flex-row w-full max-w-7xl md:items-center justify-between p-4 md:px-8">
@@ -51,7 +55,7 @@ const NavBar = () => {
               <li
                 key={link.linkName}
                 className="md:my-0 my-7 "
-                onClick={toggleMenu}
+                onClick={closeMenu}
               >
                 <NavLink
                   to={link.link}
@@ -62,7 +66,7 @@ const NavBar = () => {
               </li>
             );
           })}
-          <Button>
+          <Button onClick={closeMenu}>
             <NavLink to="/contact">Contact Us</NavLink>
           </Button>
         </ul>
