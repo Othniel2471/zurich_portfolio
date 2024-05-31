@@ -7,7 +7,7 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 const HomePage = () => {
-  const text = "SOMETHING ABOUT VISION".split(" ");
+  const text = "SOMETHING ABOUT ZURICH".split(" ");
 
   return (
     <section
@@ -30,7 +30,11 @@ const HomePage = () => {
                       }}
                       key={i}
                     >
-                      {el}{" "}
+                      {el === "ZURICH" ? (
+                        <span className="gradient-text">{el}</span>
+                      ) : (
+                        el
+                      )}{" "}
                     </motion.span>
                   ))}
                 </div>
