@@ -7,6 +7,8 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 const HomePage = () => {
+  const text = "SOMETHING ABOUT VISION".split(" ");
+
   return (
     <section
       className="w-full bg-black py-16 md:py-20 2xl:py-24"
@@ -17,7 +19,21 @@ const HomePage = () => {
           <div className="flex max-w-3xl flex-grow flex-col place-items-center justify-center gap-8 md:order-first  md:justify-center 2xl:gap-12">
             <div className="flex flex-col gap-2 justify-center place-items-center">
               <h1 className="flex flex-col text-[26px] font-semibold capitalize text-center md:font-bold md:text-5xl md:tracking-[-0.02em] lg:text-[40px] lg:leading-[69.74px] text-white">
-                <span>SOMETHING ABOUT VISION:</span>
+                <div>
+                  {text.map((el, i) => (
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{
+                        duration: 1,
+                        delay: i / 10,
+                      }}
+                      key={i}
+                    >
+                      {el}{" "}
+                    </motion.span>
+                  ))}
+                </div>
                 EXECUTE OUR DESIGNS FOR THE BEST
               </h1>
               <p className="text-[0.9em] lg:text-[1em] text-base w-[21rem] md:w-[56rem] text-white text-center">
