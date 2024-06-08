@@ -3,11 +3,24 @@ import {
   faEnvelope,
   faMapMarkerAlt,
   faPhoneAlt,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+import formImage from "../assets/pngs/form-img.png";
+import Button from "../components/general/Button";
+import bgImg from "../assets/pngs/gradient6.jpg";
 
 const Contact = () => {
   return (
-    <section className="w-full py-16 md:py-20 2xl:py-24 bg-black text-white">
+    <section
+      className="w-full py-16 md:py-20 2xl:py-24 bg-black text-white"
+      style={{
+        backgroundColor: "#00000",
+        backgroundImage: ` url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        // backgroundBlendMode: "overlay",
+      }}
+    >
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8">
         <div className="grid place-items-center gap-10 mb-4">
           <h2 className="capitalize font-[600] text-[30px] text-[#ffff]">
@@ -48,6 +61,50 @@ const Contact = () => {
             <div>
               <a href="tel:+234-803-465-2883">+234-803-465-2883</a>
             </div>
+          </div>
+        </div>
+        <div className="grid place-items-center gap-10">
+          <h2 className="capitalize font-[600] text-[30px] text-[#ffff]">
+            Leave Us A Message
+          </h2>
+        </div>
+        <div className="grid place-items-center">
+          <div
+            className="w-[300px] h-[200px] lg:w-[1042px] lg:h-[436px] rounded-md grid place-items-center"
+            style={{
+              backgroundImage: `url(${formImage})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <form
+              action=""
+              className="bg-black lg:w-[485px] lg:h-[320px] w-[300px] h-[200px] grid place-items-center opacity-85 rounded-md gap-3"
+            >
+              <div className="flex flex-col items-center gap-3 w-[300px] lg:w-[350px] text-white">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="bg-black opacity-85 w-full h-[32px] border-b-2 border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#ff0000]"
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="bg-black opacity-85 w-full h-[32px] border-b-2 border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#ff0000]"
+                />
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                  className="bg-black opacity-85 w-full h-[72px] border-b-2 border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#ff0000]"
+                ></textarea>
+                <Button className="w-[35px] h-[35px] grid place-items-center text-white p-2 rounded-md">
+                  <FontAwesomeIcon icon={faPaperPlane} />
+                </Button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

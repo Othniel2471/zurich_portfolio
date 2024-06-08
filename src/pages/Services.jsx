@@ -2,10 +2,20 @@ import servImg from "../assets/imgs/services.jpg";
 import servImg2 from "../assets/imgs/hero-img2.jpg";
 import servImg3 from "../assets/imgs/hero-img.jpg";
 import { motion } from "framer-motion";
+import bgImg from "../assets/pngs/gradient6.jpg";
 
 const Services = () => {
   return (
-    <section className="w-full py-16 md:py-20 2xl:py-24 bg-black text-white">
+    <section
+      className="w-full py-16 md:py-20 2xl:py-24 bg-black text-white"
+      style={{
+        backgroundColor: "#00000",
+        backgroundImage: ` url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        // backgroundBlendMode: "overlay",
+      }}
+    >
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8">
         <div className="grid place-items-center gap-10 mb-4">
           <h2 className="capitalize font-[600] text-[30px] text-[#ffff]">

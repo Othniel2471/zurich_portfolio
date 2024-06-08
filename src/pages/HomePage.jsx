@@ -5,14 +5,21 @@ import Hero2 from "../assets/imgs/Photo2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
-
+import bgImg from "../assets/pngs/gradient6.jpg";
 const HomePage = () => {
   const text = "SOMETHING ABOUT ZURICH".split(" ");
 
   return (
     <section
-      className="w-full bg-black py-16 md:py-20 2xl:py-24"
+      className="w-full  opacity-1 py-16 md:py-20 2xl:py-24"
       id="hero-section"
+      style={{
+        backgroundColor: "#00000",
+        backgroundImage: ` url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay",
+      }}
     >
       <div className="mx-auto grid w-full max-w-7xl place-items-center gap-6 px-4 md:gap-12 md:px-8">
         <div className="flex flex-col gap-12 md:flex-row">
@@ -31,7 +38,17 @@ const HomePage = () => {
                       key={i}
                     >
                       {el === "ZURICH" ? (
-                        <span className="gradient-text">{el}</span>
+                        <motion.span
+                          className="gradient-text"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 1,
+                            delay: i / 10,
+                          }}
+                        >
+                          {el}
+                        </motion.span>
                       ) : (
                         el
                       )}{" "}

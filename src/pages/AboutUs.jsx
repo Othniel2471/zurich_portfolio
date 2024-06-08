@@ -4,10 +4,20 @@ import {
   faRocket,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import bgImg from "../assets/pngs/gradient6.jpg";
 
 const AboutUs = () => {
   return (
-    <section className="w-full h-full py-16 md:py-20 2xl:py-24 text-white">
+    <section
+      className="w-full h-full py-16 md:py-20 2xl:py-24 text-white"
+      style={{
+        backgroundColor: "#00000",
+        backgroundImage: ` url(${bgImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundBlendMode: "overlay",
+      }}
+    >
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 px-4 md:gap-12 md:px-8">
         <div className="grid place-items-center gap-16 mb-4">
           <h2 className="capitalize font-[600] text-[30px] text-[#ffff]">
