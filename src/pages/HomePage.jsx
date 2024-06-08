@@ -1,13 +1,12 @@
 import Button from "../components/general/Button";
 import { NavLink } from "react-router-dom";
-import Hero1 from "../assets/imgs/Photo.png";
 import Hero2 from "../assets/imgs/Photo2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import bgImg from "../assets/pngs/gradient6.jpg";
 const HomePage = () => {
-  const text = "SOMETHING ABOUT ZURICH".split(" ");
+  const text = "ZURICH CONSULTING".split(" ");
 
   return (
     <section
@@ -55,7 +54,6 @@ const HomePage = () => {
                     </motion.span>
                   ))}
                 </div>
-                EXECUTE OUR DESIGNS FOR THE BEST
               </h1>
               <p className="text-[0.9em] lg:text-[1em] text-base w-[21rem] md:w-[56rem] text-white text-center">
                 Zurich Consulting Limited is a Nigerian incorporated that was
@@ -75,17 +73,9 @@ const HomePage = () => {
             </div>
             <div className="flex flex-col lg:flex-row  justify-center items-center  gap-2">
               <motion.img
-                src={Hero1}
-                alt="hero1"
-                className=" w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] "
-                initial={{ opacity: 0, scale: 0, y: 100 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              />
-              <motion.img
                 src={Hero2}
                 alt="hero2"
-                className="w-[300px] h-[200px] lg:w-[500px] lg:h-[400px] "
+                className="w-[300px] h-[200px] lg:w-[1042px] lg:h-[436px]"
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6 }}
