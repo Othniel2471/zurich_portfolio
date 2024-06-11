@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -8,8 +9,25 @@ import {
 import formImage from "../assets/pngs/form-img.png";
 import Button from "../components/general/Button";
 import bgImg from "../assets/pngs/gradient6.jpg";
+import { useForm } from "@formspree/react";
+import SuccessPage from "../components/general/SuccessPage";
+import { Bars } from "react-loader-spinner";
 
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xrgnnplr");
+  const [loading, setLoading] = useState(false);
+
+  if (state.succeeded) {
+    return <SuccessPage />;
+  }
+
+  const handleClick = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  };
+
   return (
     <section
       className="w-full py-16 md:py-20 2xl:py-24 bg-black text-white"
@@ -78,30 +96,53 @@ const Contact = () => {
             }}
           >
             <form
-              action=""
+              onSubmit={handleSubmit}
               className="bg-black lg:w-[485px] lg:h-[320px] w-[300px] h-[200px] grid place-items-center opacity-85 rounded-md gap-3"
             >
               <div className="flex flex-col items-center gap-3 w-[300px] lg:w-[350px] text-white">
+                {/* <label htmlFor="email">Email Address</label> */}
                 <input
+                  name="name"
                   type="text"
                   placeholder="Name"
                   className="bg-black opacity-85 w-full h-[32px] border-b-2 border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#ff0000]"
+                  required
                 />
                 <input
+                  name="email"
                   type="email"
                   placeholder="Email"
                   className="bg-black opacity-85 w-full h-[32px] border-b-2 border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#ff0000]"
+                  required
                 />
                 <textarea
-                  name=""
-                  id=""
+                  name="message"
+                  id="message"
                   cols="30"
                   rows="10"
                   placeholder="Message"
                   className="bg-black opacity-85 w-full h-[72px] border-b-2 border-gray-300 px-4 py-2 text-sm focus:outline-none focus:border-[#ff0000]"
+                  required
                 ></textarea>
-                <Button className="w-[35px] h-[35px] grid place-items-center text-white p-2 rounded-md">
-                  <FontAwesomeIcon icon={faPaperPlane} />
+                <Button
+                  className="w-[35px] h-[35px] grid place-items-center text-white p-2 rounded-md"
+                  onClick={handleClick}
+                >
+                  {loading ? (
+                    <span className="flex ">
+                      <Bars
+                        height="30"
+                        width="30"
+                        color="#fff"
+                        ariaLabel="bars-loading"
+                        wrapperStyle={{}}
+                        wrapperClass=""
+                        visible={true}
+                      />{" "}
+                    </span>
+                  ) : (
+                    <FontAwesomeIcon icon={faPaperPlane} />
+                  )}
                 </Button>
               </div>
             </form>
